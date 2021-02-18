@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-clip: border-box;
+}
+@import 'fonts.scss';
+@import 'backs.scss';
+@import 'anims.scss';
+@import 'mobilefirst.scss';
+
+@media all and (orientation: portrait) and (min-width: 430px){
+  body{
+    font-size: 2.5vw;
+  }
+}
+@media all and (orientation: portrait) and (min-width: 750px){
+  body{
+    font-size: 3vw;
+    .skills{
+      .data{
+        .hard{
+          font-size: 90%;
+        }
+      }
+    }
+  }
+}
+
+@import 'desktop.scss';

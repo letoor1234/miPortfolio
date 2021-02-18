@@ -1,0 +1,98 @@
+//main: main.scss
+@media all and (orientation: landscape){
+  body{
+    font-size: 1vw;
+    .about-me, .skills, .contact{
+      font-size: 130%;
+    }
+    header{
+      nav{
+        font-size: 90%;
+        margin: auto 0 0 60%;
+      }
+    }
+    .about-me{
+      .data{
+        .first-row{
+          float: left;
+          width: 60%;
+          h3{
+            width: 5vw;
+            height: 5vw;
+            margin: 1em;
+            padding: 1em;
+            .triangle{
+              border-top: 2.5vw solid $blue;
+              border-left: 5vw solid $blue;
+              border-right: 5vw solid transparent;
+              border-bottom: 2.5vw solid transparent;
+            }
+          }
+          h4{
+            width: 50%;
+            margin: 2em 20% 2em 20%;
+          }
+        }
+        .second-row{
+          float: right;
+          width: 35%;
+        }
+
+      }
+    }
+    .skills{
+      .data{
+        h4{
+          text-align: left;
+        }
+        .first-row{
+          width: 40%;
+          float: left;
+          div.soft{
+
+            .row-1, .row-2{
+              width: 100%;
+              padding: 1em;
+              padding-top: 0;
+              padding-bottom: 0;
+              float: left;
+            }
+          }
+        }
+        .second-row{
+          width: 60%;
+          float: right;
+        }
+      }
+    }
+    .jobs{
+      .carr-container{
+        .carr{
+          article{
+            width: 24vw;
+            height: calc(24vw*1.5);
+            margin: 1vw auto 1vw;
+            p{
+              font-size: 100%;
+            }
+          }
+        }
+      }
+    }
+    .contact{
+      display: none;
+      .data{
+        width: 100%;
+        .row-first, .row-second{
+          width: 50%;
+        }
+        .row-first{
+          float: left;
+        }
+        .row-second{
+          float: right;
+        }
+      }
+    }
+  }
+}

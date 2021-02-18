@@ -1,0 +1,193 @@
+//main: main.scss;
+  body{
+    .veil{
+      animation-duration: 2s;
+      animation-name: slideup;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+      height: 90vh;
+    }
+    @keyframes slideup{
+      from{ height: 90vh; }to{ height: 10vh; }
+    }
+    .about-me, .skills, .jobs, .contact{
+      max-height: 90vh;
+      animation-duration: 2s;
+      animation-name: expandsection;
+      animation-fill-mode: forwards;
+    }
+    .about-me{
+      animation-delay: 3s;
+    }
+    .skills{
+      animation-delay: 4s;
+    }
+    .jobs{
+      animation-delay: 1s;
+    }
+    @keyframes expandsection{
+      from{ max-height: 90vh; } to{ max-height: 200vh; }
+    }
+    .about-me{
+      .triangle{
+        border-top: 0vw solid $blue;
+        border-left: 0vw solid $blue;
+        border-right: 0vw solid transparent;
+        border-bottom: 0vw solid transparent;
+        animation-duration: 2s;
+        animation-name: trianglefade;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes trianglefade{
+        from{
+          border-top: 0vw solid $blue;
+          border-left: 0vw solid $blue;
+          border-right: 0vw solid transparent;
+          border-bottom: 0vw solid transparent;
+        }
+        to{
+          border-top: 10vw solid $blue;
+          border-left: 10vw solid $blue;
+          border-right: 10vw solid transparent;
+          border-bottom: 10vw solid transparent;
+        }
+      }
+      h4{
+        opacity: 0;
+        animation-duration: 2s;
+        animation-name: fadein;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+      }
+      @keyframes fadein{
+        from{
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
+        }
+      }
+      p{
+        margin-top: 110vh;
+        animation-duration: 2s;
+        animation-name: uptext;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+      }
+      @keyframes uptext{
+        from{  margin-top: 110vh;}to{  margin-top: 5vh;}
+      }
+    }
+    .skills{
+      .data{
+        h4.first, h4.second{
+          animation-name: skillsheaders;
+          animation-fill-mode: forwards;
+          margin-top: 110vh;
+        }
+        h4.first{
+          animation-delay: 1s;
+          animation-duration: 1.5s;
+        }
+        h4.second{
+          animation-delay: 2s;
+          animation-duration: 2s;
+        }
+        @keyframes skillsheaders{
+          from{ margin-top: 110vh;}to{margin-top: 0;}
+        }
+        div.hard{
+          padding-top: 0;
+          height: 1px;
+          animation-duration: 2.5s;
+          animation-name: apearsborder;
+          animation-fill-mode: forwards;
+          animation-delay: 3s;
+          @keyframes apearsborder{
+            0%{
+              padding-top: 0;
+              height: 1px;
+            }
+            75%{
+              padding-top: .5em;
+              height: 55vh;
+            }
+            100%{
+              height: auto;
+            }
+
+          }
+          article{
+            bottom: -100vh;
+            position: relative;
+            animation-duration: .8s;
+            animation-name: uptechs;
+            animation-fill-mode: forwards;
+          }
+          article.first{  animation-delay: 3s;}
+          article.second{  animation-delay: 3.4s;}
+          article.third{  animation-delay: 3.8s;}
+          article.elcuarto{  animation-delay: 4.2s;}
+          article.fifth{  animation-delay: 4.6s;}
+          @keyframes uptechs{
+            from{bottom: -100vh;} to{  bottom: 0;}
+          }
+        }
+      }
+    }
+    .jobs{
+      .carr-container{
+        animation-name: fadein;
+        animation-duration: 1.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+      @keyframes fadein{
+        from{opacity: 0;}to{opacity: 1;}
+      }
+    }
+    .contact{
+      .data{
+        @media all and (orientation: portrait)
+        {article{
+          .linked{
+            left: -150%;
+            animation-duration: 1s;
+            animation-name: fromleft;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+          }
+          .git{
+            right: -150%;
+            animation-duration: 1s;
+            animation-name: fromright;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+          }
+          .mail{
+            left: -150%;
+            animation-duration: 1s;
+            animation-name: fromleft;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+          }
+          .cv{
+            right: -150%;
+            animation-duration: 1s;
+            animation-name: fromright;
+            animation-fill-mode: forwards;
+            animation-delay: 2.5s;
+          }
+          @keyframes fromleft{
+            from{left: -150%;} to{ left: 0; }
+          }
+          @keyframes fromright{
+            from{right: -150%;} to{ right: 0; }
+          }
+        }}
+      }
+    }
+  }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer AM</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <input class='menu-inputs' name='menu-inputs'type='radio' id='about-radio'/>
+    <input class='menu-inputs' name='menu-inputs'type='radio' id='skills-radio'/>
+    <input class='menu-inputs' name='menu-inputs'type='radio' id='jobs-radio'/>
+    <input class='menu-inputs' name='menu-inputs'type='radio' id='contact-radio'/>
+    <input class='menu-inputs' name='menu-inputs'type='radio' id='carnada-bait' checked="checked" value=""/>
+    <header id='header'>
+        <label for="carnada-bait"><h2>&#60;AM/&#62; webDev</h2></label>
+        <div class="back">  </div>
+        <nav>
+              <label id='about'for='about-radio'>About me</label>
+              <label id='skills'for='skills-radio'>Skills</label>
+              <label id='jobs'for='jobs-radio'>Jobs</label>
+              <label id='contact'for='contact-radio'>Contact</label>
+        </nav>
+    </header>
+
+    <section class='about-me'>
+        <div class='veil'>
+          <h1>&#60; me &#62;</h1>
+        </div>
+        <div class="data">
+          <div class="first-row">
+            <h3>Hi!
+              <div class="triangle">
+
+              </div></h3>
+            <h4>
+                My name is Angel Martinez and I develop web apps!
+
+            </h4>
+            <p>I started with programming in 2017 approx. with Unity 3D and UnityScript, after one year, I passed to C#. I experienced 3d modeling with blender too. <br><br>Years later, I found the world of web programming, which fascinated me from the beginning. Since then I have dedicated myself to learning every day about new technologies and good practices in a self-taught way. </p>
+          </div>
+          <div class="second-row">
+            <div class="retrato">
+
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+    <section class='skills'>
+        <div class='veil'>
+          <h1>[ 'know' ]</h1>
+        </div>
+
+        <div class="data">
+          <div class="first-row">
+            <h4 class='first'>
+                Soft skills
+            </h4>
+            <div class='soft'>
+              <div class="row-1">
+                <article class='s-skill'>
+                    <h5>Positive attitude</h5>
+                </article>
+                <article class='s-skill'>
+                    <h5>Honesty</h5>
+                </article>
+                <article class='s-skill'>
+                    <h5>Proactivity</h5>
+                </article>
+              </div>
+              <div class="row-2">
+                <article class='s-skill'>
+                    <h5>Fast learning</h5>
+                </article>
+                <article class='s-skill'>
+                    <h5>Good manners</h5>
+                </article>
+                <article class='s-skill'>
+                    <h5>Focused on results</h5>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="second-row">
+            <h4 class='second'>
+                Hard skills
+            </h4>
+            <div class='hard'>
+                <article class='first h-skill'>
+                    <h5>HTML, CSS, Javascript</h5>
+                    <p>Semantic HTML, SCSS, Flexbox, Grid layout, Responsive design, js authentications, DOM manipulation</p>
+                </article>
+                <article class='second h-skill'>
+                    <h5>React.js</h5>
+                    <p>API consume, class components, functionalities, react-router-dom, building</p>
+                </article>
+                <article class='third h-skill'>
+                    <h5>MERN Stack</h5>
+                    <p>Routering, encryption(bcrypt), authentication(passport), MongoDB, Express.js, Node.js</p>
+                </article>
+                <article class='elcuarto h-skill'>
+                    <h5>MySQL with PHP</h5>
+                    <p>Get, post, put, delete, functionalities</p>
+                </article>
+                <article class='fifth h-skill'>
+                    <h5>Git & Github</h5>
+                    <p>Git flow, upstream, clone remotes, etc</p>
+                </article>
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <section class='jobs'>
+        <div class='veil'>
+          <h1>&lt;{ did }/&gt;</h1>
+        </div>
+
+        <div class="data carr-container">
+          <div class="left-arrow arrow" onclick='moveCarr(true)'></div>
+          <div class="right-arrow arrow" onclick='moveCarr(false)'></div>
+          <div class="carr" id='carr' style="transform: translateX(0%)">
+              <article class='project'>
+                  <h5>regLog.js</h5>
+                  <img src="rsc/jobs/reglog.png" alt="">
+                  <p>This is developed with MERN stack (MongoDB, Express, Node.js, React.js)</p>
+                  <nav>
+                      <a class='web-link disable'href="url"></a>
+                      <a class='git-link'href="https://github.com/letoor1234/reglog-mern"></a>
+                  </nav>
+              </article>
+              <article class='project'>
+                  <h5>PHP simple blog</h5>
+                  <img src="" alt="">
+                  <p>This is made using PHP, MySQL and custom CSS</p>
+                  <nav>
+                      <a class='web-link disable'href="url"></a>
+                      <a class='git-link disable'href="git"></a>
+                  </nav>
+              </article>
+              <article class='project'>
+                  <h5>Clean Meme Searcher</h5>
+                  <img src="rsc/jobs/memesearcher.png" alt="">
+                  <p>This is a simple practice of API consume with fetch in React.js</p>
+                  <nav>
+                      <a class='web-link'href="https://cleanmemesearch.web.app/"></a>
+                      <a class='git-link'href="https://github.com/letoor1234/clean-meme-generator/tree/develop"></a>
+                  </nav>
+              </article>
+              <article class='project'>
+                  <h5>My portfolio</h5>
+                  <img src="rsc/jobs/portfolio.png" alt="">
+                  <p>I developed this without frameworks. HTML, SCSS, Vanilla Javascript</p>
+                  <nav>
+                      <a class='git-link disable'href="git"></a>
+                  </nav>
+              </article>
+          </div>
+        </div>
+
+    </section>
+    <section class='contact'>
+        <div class='veil'>
+          <h1> me.find() </h1>
+        </div>
+        <div class='data'>
+          <div class="row-first">
+            <article>
+              <div class="linked">
+                <a href="https://www.linkedin.com/in/angel-martinez-wb/">
+                  <div class="icon-linked"></div>
+                  <div class="img"></div>
+                  <p>LinkedIn Angel Martinez</p>
+                </a>
+              </div>
+            </article>
+            <article>
+              <div class='git'>
+                <a href="https://github.com/letoor1234">
+                  <div class="icon-git"></div>
+                  <div class="img"></div>
+                  <p>GitHub.com/letoor1234</p>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="row-second">
+            <article>
+              <div class="mail">
+                <a href="mailto:angelmartinezwb@gmail.com">
+                  <div class="icon-gmail"></div>
+                  <p>Send me an email!!</p>
+                </a>
+              </div>
+            </article>
+            <article>
+              <div class="cv">
+                <a href="">
+                  <div class="icon-cv"></div>
+                  <p>See my resume</p>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+    </section>
+    <script type='text/javascript' src="js/code.js" charset="utf-8"></script>
+</body>
+</html>

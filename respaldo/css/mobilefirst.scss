@@ -1,0 +1,248 @@
+//main: main.scss
+  body{
+    width: calc(100vw - (100vw - 100%));
+    height: 100vh;
+    position: relative;
+    header{
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2{
+        padding: 0.2em 1em;
+        transition: all 1s;
+      }
+      nav{
+        display: flex;
+        justify-content: space-around;
+        label{
+          padding: .5em;
+          transition: all 1s;
+        }
+      }
+    }
+    .menu-inputs{
+      display: none;
+    }
+    #about-radio{
+      &:checked{
+        &~section.about-me{
+          display: block;
+        }
+        &~section.skills, section.jobs, section.contact{
+          display: none;
+        }
+      }
+    }
+    #skills-radio{
+      &:checked{
+        &~section.skills{
+          display: block;
+        }
+        &~section.about-me, section.jobs, section.contact{
+          display: none;
+        }
+      }
+    }
+    #jobs-radio{
+      &:checked{
+        &~section.jobs{
+          display: block;
+        }
+        &~section.about-me, section.skills, section.contact{
+          display: none;
+        }
+      }
+    }
+    #contact-radio{
+      &:checked{
+        &~section.contact{
+          display: block;
+        }
+        &~section.about-me, section.skills, section.jobs{
+          display: none;
+        }
+      }
+    }
+    .veil{
+      left: 0;
+      right: 0;
+      top:0;
+      position: absolute;
+      z-index:10;
+      h1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 15;
+      }
+    }
+    .about-me, .skills, .jobs, .contact{
+      width: 100%;
+      overflow:hidden;
+      position: relative;
+      min-height: 90vh;
+      .data{
+        padding-top: 10vh;
+      }
+    }
+    .about-me{
+      display: block;
+      .data{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        h3{
+          width: 10vw;
+          height: 10vw;
+          margin: 1em;
+          padding: 1em;
+
+        }
+        h4{
+          background-color: lighten(grey, 35%);
+          width: 75%;
+          margin: 2em 5% 0.5em 20%;
+          padding:.5em;
+        }
+        p{
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    .skills{
+      display: none;
+      width:100%;
+      .data{
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        h4{
+          padding: .5em;
+        }
+        div.soft{
+          .row-1, .row-2{
+            width: 50%;
+            padding: 1em;
+            padding-top: 0;
+          }
+          .row-1{
+            float: left;
+          }
+          .row-2{
+            float: right;
+          }
+        }
+        div.hard{
+          padding: .5em;
+          article{
+            padding: .5em;
+            padding-top: 0;
+            margin-bottom: .5em;
+          }
+        }
+      }
+    }
+    .jobs{
+      display: none;
+      .carr-container{
+        width: 100%;
+        overflow:hidden;
+        position: relative;
+        .left-arrow, .right-arrow{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 5;
+        }
+        .right-arrow{
+          right: 0;
+        }
+        .carr{
+          display: flex;
+          transition: all 1s;
+          article{
+            width: 90vw;
+            height: 150vw;
+            padding: 1em;
+            margin: 1vh 5vw 1vh;
+            h5{
+              height: 5%;
+            }
+            img{
+              width: 95%;
+              margin: 0 auto;
+              height: 75%;
+            }
+            p{
+              height: 10%;
+            }
+            nav{
+              height: 10%;
+              .git-link, .web-link{
+                display: inline-block;
+                width: 3em;
+                height: 3em;
+              }
+              .git-link{
+                float: left;
+              }
+              .web-link{
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact{
+      display: none;
+      .data{
+        width: 100%;
+        .row-first, .row-second{
+          width: 100%;
+          float: none;
+          article{
+            width: 80%;
+            margin: 2vw auto;
+            .git, .mail, .linked, .cv{
+              position: relative;
+              width: 100%;
+              padding: 1em;
+              a{
+                .icon-git, .icon-gmail, .icon-linked, .icon-cv{
+                  position: absolute;
+                  left: calc(50% - 1.5em);
+                  top: .5em;
+                  width: 3em;
+                  height: 3em;
+                }
+                .img{
+                  display: inline-block;
+                  width: 5em;
+                  height: 5em;
+                }
+              }
+            }
+            .git, .linked{
+              p{
+                margin-top: 3em;
+                display: inline-block;
+              }
+            }
+            .mail, .cv{
+              p{
+                margin-top: 3em;
+                display: block;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }

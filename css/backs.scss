@@ -1,0 +1,316 @@
+//main: main.scss
+$blue: #384685;
+$green: #4b9149;
+$red: #944040;
+$grey: #7e8784;
+$color: $blue;
+label:hover{
+  cursor: pointer;
+}
+body{
+  .enable{
+    opacity: 1;
+  }
+  .disable{
+    opacity: 0.5;
+    &:hover{
+      cursor: default;
+    }
+  }
+  #about-radio{
+    &:checked~header{
+      h2{
+        color: $blue;
+      }
+      nav>label#about{
+        background-color: darken($blue, 20%);
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        &:hover{
+            color: black;
+            background-color: lighten($blue, 25%);
+        }
+      }
+    }
+  }
+  #skills-radio{
+    &:checked~header{
+        h2{
+          color: $green;
+        }
+        nav>label{
+        background-color: $green;
+        &:hover{
+            background-color: lighten($green, 25%);
+        }
+        &#skills{
+          background-color: darken($green, 25%);
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          &:hover{
+              color: black;
+              background-color: lighten($green, 25%);
+          }
+        }
+
+      }
+    }
+  }
+  #jobs-radio{
+    &:checked~header{
+      h2{
+        color: $red;
+      }
+      nav>label{
+        background-color: $red;
+        &:hover{
+            background-color: lighten($red, 25%);
+        }
+        &#jobs{
+          background-color: darken($red, 25%);
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          &:hover{
+              color: black;
+              background-color: lighten($red, 25%);
+          }
+        }
+      }
+    }
+  }
+  #contact-radio{
+    &:checked~header{
+      h2{
+        color: $grey;
+      }
+      nav>label{
+        background-color: $grey;
+        &:hover{
+            background-color: lighten($grey, 25%);
+        }
+        &#contact{
+          background-color: darken($grey, 25%);
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          &:hover{
+              color: black;
+              background-color: lighten($grey, 25%);
+          }
+        }
+      }
+    }
+  }
+  #carnada-bait{
+    &:checked~header{
+      div.back{
+        height: 90vh;
+      }
+      nav>label{
+        background-color: black;
+        color: white;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+      }
+    }
+  }
+  header{
+    div.back{
+      width: 100%;
+      height: 100%;
+      background-image: url('../rsc/background.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    background-color: lighten(black, 5%);
+    nav{
+      label{
+        color: white;
+        background-color: $blue;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        &:hover{
+          color: black;
+            background-color: lighten($blue, 25%);
+        }
+      }
+    }
+  }
+  .about-me{
+    .veil{
+      background-color: $blue;
+      color: white;
+    }
+  }
+  .skills{
+    .veil{
+      background-color: $green;
+      color:white;
+    }
+    display: none;
+    width:100%;
+    .data{
+      h4{
+        color: darken($green, 15%);
+      }
+      div.soft{
+        .row-1, .row-2{
+          border-left: solid 2px $green;
+        }
+      }
+      div.hard{
+        border-left: 2px solid $green;
+        border-top: 2px solid $green;
+        article{
+          background-color: lighten($green, 25%);
+          border-radius: 4px;
+          h5{
+            color: darken($green, 20%);
+          }
+        }
+      }
+    }
+  }
+  .jobs{
+    .veil{
+      background-color: $red;
+      color: white;
+    }
+    .carr-container{
+      .left-arrow{
+        border-left: 0 solid transparent;
+        border-right: 2em solid $red;
+        border-top: 1.5em solid transparent;
+        border-bottom: 1.5em solid transparent;
+        &:hover{
+          cursor: pointer;
+          border-right: 2em solid lighten($red, 15%);
+        }
+        &:active{
+          border-right: 2em solid darken($red, 15%);
+        }
+      }
+      .right-arrow{
+        border-left: 2em solid $red;
+        border-right: 0 solid transparent;
+        border-top: 1.5em solid transparent;
+        border-bottom: 1.5em solid transparent;
+        &:hover{
+          cursor: pointer;
+          border-left: 2em solid lighten($red, 15%);
+        }
+        &:active{
+          border-left: 2em solid darken($red, 15%);
+        }
+      }
+      .carr{
+        article{
+          background-color: lighten(grey, 25%);
+          border-radius: 4px;
+          h5{
+            color: darken($red, 25%);
+          }
+          p{
+            color: lighten(black, 25%);
+          }
+          nav{
+            .git-link, .web-link{
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .git-link{
+                background-image: url('../rsc/github-icon.png');
+            }
+            .web-link{
+                background-image: url('../rsc/url-icon.png');
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact{
+    .veil{
+      background-color: $grey;
+      h1{
+        color: white;
+      }
+    }
+    .data{
+      article{
+        .git, .mail, .linked, .cv{
+
+          a{
+            .icon-git{
+              background-image: url('../rsc/github-icon.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .icon-gmail{
+              background-image: url('../rsc/gmail-icon.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .icon-linked{
+              background-image: url('../rsc/linked-icon.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .icon-cv{
+              background-image: url('../rsc/cv-icon.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+          }
+        }
+        .linked{
+          background-color: lighten($blue, 45%);
+          border: 1px solid $blue;
+          border-radius: 8px;
+          .img{
+            background-image: url('https://media-exp1.licdn.com/dms/image/C4E35AQFUFDVVcpcp-w/profile-framedphoto-shrink_200_200/0/1611269331748?e=1613466000&v=beta&t=UjKD2wj2DwCmqHpqlIYHdYHQ9sukMb1aJl2KJaTbBNM');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+          }
+          p{
+            color: darken($blue, 25%);
+          }
+        }
+        .git{
+          background-color: lighten($grey, 35%);
+          border: 1px solid $grey;
+          border-radius: 8px;
+          .img{
+            background-image: url('https://avatars.githubusercontent.com/u/74751311?s=460&u=f3139edee015cf03fc511999a8aac0089180b3df&v=4');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+          }
+          p{
+            color: darken($grey, 25%);
+          }
+        }
+        .mail{
+          background-color: lighten($red, 35%);
+          border: 1px solid $red;
+          border-radius: 8px;
+          p{
+            color: darken($red, 25%);
+          }
+        }
+        .cv{
+          background-color: lighten($green, 35%);
+          border: 1px solid $green;
+          border-radius: 8px;
+          p{
+            color: darken($green, 25%);
+          }
+        }
+      }
+    }
+  }
+}

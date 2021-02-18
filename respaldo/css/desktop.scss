@@ -1,0 +1,130 @@
+//main: main.scss
+
+@media all and (orientation: landscape){
+  body{
+    font-size: 1.3vw;
+    header{
+      width: 100%;
+      height: 10vh;
+      flex-direction: row;
+      padding-top: 2vh;
+      h2{
+        padding: 0.2em 1em;
+        transition: all 1s;
+      }
+      nav{
+        display: flex;
+        justify-content: space-between;
+        min-width: 30vw;
+        label{
+          padding: .5em;
+          transition: all 1s;
+        }
+      }
+    }
+    .about-me{
+      .data{
+        h3{
+          height: 1vw;
+          width: 1vw;
+          .triangle{
+            border-top: 0vw solid $blue;
+            border-left: 0vw solid $blue;
+            border-right: 0vw solid transparent;
+            border-bottom: 0vw solid transparent;
+            animation-duration: 2s;
+            animation-name: trianglefade;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+          }
+
+          @keyframes trianglefade{
+            from{
+              border-top: 0vw solid $blue;
+              border-left: 0vw solid $blue;
+              border-right: 0vw solid transparent;
+              border-bottom: 0vw solid transparent;
+            }
+            to{
+              border-top: 5vw solid $blue;
+              border-left: 5vw solid $blue;
+              border-right: 5vw solid transparent;
+              border-bottom: 5vw solid transparent;
+            }
+          }
+        }
+        h4{
+          margin: 2em 5% 0.5em 15%;
+
+        }
+      }
+    }
+    .skills{
+      display: none;
+      width:100%;
+      .data{
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        .first-row, .second-row{
+          float: left;
+          h4{
+            text-align: left;
+          }
+        }
+        .first-row{
+          width: 30%;
+          .soft{
+            .row-1, .row-2{
+              float: none;
+              width: 100%;
+              padding-bottom: 0;
+            }
+          }
+        }
+        .second-row{
+          width: 70%;
+        }
+      }
+    }
+    .jobs{
+      .carr-container{
+        width: 100%;
+        .left-arrow, .right-arrow{
+          display: none;
+        }
+        .carr{
+          font-size: 70%;
+          article{
+            padding: 1em;
+            margin: 1vh 1vw 1vh;
+            height: 37.5vw;
+            p{
+              font-size: 100%;
+            }
+          }
+        }
+      }
+    }
+    .contact{
+      display: none;
+      .data{
+        width: 100%;
+        .row-first, .row-second{
+          width: 50%;
+          article{
+            width: 80%;
+            margin: 3vw auto;
+          }
+        }
+        .row-first{
+          float: left;
+        }
+        .row-second{
+          float: right;
+        }
+
+      }
+    }
+  }
+}
