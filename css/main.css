@@ -838,13 +838,51 @@ body .contact .data .row-first article .mail p, body .contact .data .row-first a
   body {
     font-size: 1vw;
   }
+}
+
+@media all and (orientation: landscape) and (min-width: 800px) {
   body .about-me, body .skills, body .contact {
     font-size: 130%;
   }
+}
+
+@media all and (orientation: landscape) and (max-width: 799px) {
+  body .about-me, body .skills, body .contact {
+    font-size: 150%;
+  }
+}
+
+@media all and (orientation: landscape) and (min-width: 800px) {
+  body header label {
+    font-size: 100%;
+  }
+}
+
+@media all and (orientation: landscape) and (max-width: 799px) {
+  body header label {
+    font-size: 130%;
+  }
+}
+
+@media all and (orientation: landscape) {
   body header nav {
-    font-size: 90%;
     margin: auto 0 0 60%;
   }
+}
+
+@media all and (orientation: landscape) and (min-width: 800px) {
+  body header nav {
+    font-size: 90%;
+  }
+}
+
+@media all and (orientation: landscape) and (max-width: 799px) {
+  body header nav {
+    font-size: 130%;
+  }
+}
+
+@media all and (orientation: landscape) {
   body .about-me .data .first-row {
     float: left;
     width: 60%;

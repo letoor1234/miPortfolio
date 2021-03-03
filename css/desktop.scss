@@ -3,12 +3,30 @@
   body{
     font-size: 1vw;
     .about-me, .skills, .contact{
-      font-size: 130%;
+      @media (min-width: 800px){
+        font-size: 130%;
+      }
+      @media (max-width: 799px){
+        font-size: 150%;
+      }
     }
     header{
+      label{
+        @media (min-width: 800px){
+          font-size: 100%;
+        }
+        @media (max-width: 799px){
+          font-size: 130%;
+        }
+      }
       nav{
-        font-size: 90%;
         margin: auto 0 0 60%;
+        @media (min-width: 800px){
+          font-size: 90%;
+        }
+        @media (max-width: 799px){
+          font-size: 130%;
+        }
       }
     }
     .about-me{
