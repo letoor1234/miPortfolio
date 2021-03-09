@@ -200,13 +200,9 @@
         .second-row{
           float: none;
           width: 100%;
-          .retrato{
-            width: 15em;
-            height: 15em;
-            margin: 3em auto;
-            background-color: black;
-            border-radius: 50%;
-          }
+          margin: 2em;
+          margin-left: 0;
+          padding: 1em;
         }
       }
     }
