@@ -51,11 +51,11 @@ body .skills .data div.hard article p {
   color: #404040;
 }
 
-body .jobs .carr-container .carr article h5 {
+body .jobs .carr article h5 {
   font-size: 150%;
 }
 
-body .jobs .carr-container .carr article p {
+body .jobs .carr article p {
   font-size: 125%;
   font-weight: bold;
 }
@@ -231,8 +231,13 @@ body .skills .data h4 {
   color: #315e2f;
 }
 
-body .skills .data div.soft .row-1, body .skills .data div.soft .row-2 {
+body .skills .data div.soft .row-1 {
   border-left: solid 2px #4b9149;
+}
+
+body .skills .data div.soft .row-2 {
+  border-right: solid 2px #4b9149;
+  text-align: right;
 }
 
 body .skills .data div.hard {
@@ -254,61 +259,29 @@ body .jobs .veil {
   color: white;
 }
 
-body .jobs .carr-container .left-arrow {
-  border-left: 0 solid transparent;
-  border-right: 2em solid #944040;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-}
-
-body .jobs .carr-container .left-arrow:hover {
-  cursor: pointer;
-  border-right: 2em solid #bc6464;
-}
-
-body .jobs .carr-container .left-arrow:active {
-  border-right: 2em solid #5f2929;
-}
-
-body .jobs .carr-container .right-arrow {
-  border-left: 2em solid #944040;
-  border-right: 0 solid transparent;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-}
-
-body .jobs .carr-container .right-arrow:hover {
-  cursor: pointer;
-  border-left: 2em solid #bc6464;
-}
-
-body .jobs .carr-container .right-arrow:active {
-  border-left: 2em solid #5f2929;
-}
-
-body .jobs .carr-container .carr article {
+body .jobs .carr article {
   background-color: silver;
   border-radius: 4px;
 }
 
-body .jobs .carr-container .carr article h5 {
+body .jobs .carr article h5 {
   color: #3b1a1a;
 }
 
-body .jobs .carr-container .carr article p {
+body .jobs .carr article p {
   color: #404040;
 }
 
-body .jobs .carr-container .carr article nav .git-link, body .jobs .carr-container .carr article nav .web-link {
+body .jobs .carr article nav .git-link, body .jobs .carr article nav .web-link {
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-body .jobs .carr-container .carr article nav .git-link {
+body .jobs .carr article nav .git-link {
   background-image: url("../rsc/github-icon.png");
 }
 
-body .jobs .carr-container .carr article nav .web-link {
+body .jobs .carr article nav .web-link {
   background-image: url("../rsc/url-icon.png");
 }
 
@@ -695,6 +668,8 @@ body .skills .data div.soft .row-2 {
 
 body .skills .data div.hard {
   padding: .5em;
+  width: 100%;
+  margin: auto;
 }
 
 body .skills .data div.hard article {
@@ -703,69 +678,69 @@ body .skills .data div.hard article {
   margin-bottom: .5em;
 }
 
+body .skills .data .third-row .learn {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 1em auto 2em;
+}
+
+body .skills .data .third-row .learn article {
+  background-color: #d6ead5;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+body .skills .data .third-row .learn article h5 {
+  font-size: 120%;
+  text-align: center;
+}
+
 body .jobs {
   display: none;
 }
 
-body .jobs .carr-container {
+body .jobs .carr {
   width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-body .jobs .carr-container .left-arrow, body .jobs .carr-container .right-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-}
-
-body .jobs .carr-container .right-arrow {
-  right: 0;
-}
-
-body .jobs .carr-container .carr {
   display: flex;
-  transition: all 1s;
+  flex-wrap: wrap;
 }
 
-body .jobs .carr-container .carr article {
-  width: 100vw;
-  height: 150vw;
+body .jobs .carr article {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
   padding: 1em;
-  margin: 1vh 5vw 1vh;
+  margin: 1vh auto 1vh;
 }
 
-body .jobs .carr-container .carr article h5 {
+body .jobs .carr article h5 {
   height: 5%;
 }
 
-body .jobs .carr-container .carr article img {
+body .jobs .carr article img {
   max-width: 95%;
   display: block;
   margin: .5em auto;
   height: 75%;
 }
 
-body .jobs .carr-container .carr article p {
-  height: 10%;
+body .jobs .carr article nav {
+  margin-top: 1em;
+  height: 4em;
 }
 
-body .jobs .carr-container .carr article nav {
-  height: 10%;
-}
-
-body .jobs .carr-container .carr article nav .git-link, body .jobs .carr-container .carr article nav .web-link {
+body .jobs .carr article nav .git-link, body .jobs .carr article nav .web-link {
   display: inline-block;
   width: 3em;
   height: 3em;
 }
 
-body .jobs .carr-container .carr article nav .git-link {
+body .jobs .carr article nav .git-link {
   float: left;
 }
 
-body .jobs .carr-container .carr article nav .web-link {
+body .jobs .carr article nav .web-link {
   float: right;
 }
 
@@ -902,30 +877,23 @@ body .contact .data .row-first article .mail p, body .contact .data .row-first a
     float: right;
     width: 35%;
   }
-  body .skills .data h4 {
-    text-align: left;
-  }
   body .skills .data .first-row {
     width: 40%;
-    float: left;
+    margin: auto;
   }
-  body .skills .data .first-row div.soft .row-1, body .skills .data .first-row div.soft .row-2 {
-    width: 100%;
-    padding: 1em;
-    padding-top: 0;
-    padding-bottom: 0;
-    float: left;
+  body .skills .data div.hard {
+    width: 80%;
+    margin: auto;
   }
-  body .skills .data .second-row {
-    width: 60%;
-    float: right;
+  body .skills .data .third-row .learn {
+    width: 50%;
+    margin: 1em auto 2em;
   }
-  body .jobs .carr-container .carr article {
-    width: 24vw;
-    height: calc(24vw*1.5);
-    margin: 1vw auto 1vw;
+  body .jobs .carr article {
+    width: 23vw;
+    margin: .5vw .5vw;
   }
-  body .jobs .carr-container .carr article p {
+  body .jobs .carr article p {
     font-size: 100%;
   }
   body .contact {

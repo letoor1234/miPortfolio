@@ -60,39 +60,29 @@
     }
     .skills{
       .data{
-        h4{
-          text-align: left;
-        }
         .first-row{
           width: 40%;
-          float: left;
-          div.soft{
-
-            .row-1, .row-2{
-              width: 100%;
-              padding: 1em;
-              padding-top: 0;
-              padding-bottom: 0;
-              float: left;
-            }
-          }
+          margin: auto;
         }
-        .second-row{
-          width: 60%;
-          float: right;
+        div.hard{
+          width: 80%;
+          margin: auto;
+        }
+        .third-row{
+          .learn{
+            width: 50%;
+            margin: 1em auto 2em;
+          }
         }
       }
     }
     .jobs{
-      .carr-container{
-        .carr{
-          article{
-            width: 24vw;
-            height: calc(24vw*1.5);
-            margin: 1vw auto 1vw;
-            p{
-              font-size: 100%;
-            }
+      .carr{
+        article{
+          width: 23vw;
+          margin: .5vw .5vw;
+          p{
+            font-size: 100%;
           }
         }
       }

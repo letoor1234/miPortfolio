@@ -157,8 +157,12 @@ body{
         color: darken($green, 15%);
       }
       div.soft{
-        .row-1, .row-2{
+        .row-1 {
           border-left: solid 2px $green;
+        }
+        .row-2{
+          border-right: solid 2px $green;
+          text-align: right;
         }
       }
       div.hard{
@@ -179,54 +183,26 @@ body{
       background-color: $red;
       color: white;
     }
-    .carr-container{
-      .left-arrow{
-        border-left: 0 solid transparent;
-        border-right: 2em solid $red;
-        border-top: 1.5em solid transparent;
-        border-bottom: 1.5em solid transparent;
-        &:hover{
-          cursor: pointer;
-          border-right: 2em solid lighten($red, 15%);
+    .carr{
+      article{
+        background-color: lighten(grey, 25%);
+        border-radius: 4px;
+        h5{
+          color: darken($red, 25%);
         }
-        &:active{
-          border-right: 2em solid darken($red, 15%);
+        p{
+          color: lighten(black, 25%);
         }
-      }
-      .right-arrow{
-        border-left: 2em solid $red;
-        border-right: 0 solid transparent;
-        border-top: 1.5em solid transparent;
-        border-bottom: 1.5em solid transparent;
-        &:hover{
-          cursor: pointer;
-          border-left: 2em solid lighten($red, 15%);
-        }
-        &:active{
-          border-left: 2em solid darken($red, 15%);
-        }
-      }
-      .carr{
-        article{
-          background-color: lighten(grey, 25%);
-          border-radius: 4px;
-          h5{
-            color: darken($red, 25%);
+        nav{
+          .git-link, .web-link{
+            background-repeat: no-repeat;
+            background-size: cover;
           }
-          p{
-            color: lighten(black, 25%);
+          .git-link{
+              background-image: url('../rsc/github-icon.png');
           }
-          nav{
-            .git-link, .web-link{
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-            .git-link{
-                background-image: url('../rsc/github-icon.png');
-            }
-            .web-link{
-                background-image: url('../rsc/url-icon.png');
-            }
+          .web-link{
+              background-image: url('../rsc/url-icon.png');
           }
         }
       }
